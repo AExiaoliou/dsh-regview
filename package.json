@@ -2,7 +2,6 @@
   "name": "dsh-regview-monorepo",
   "version": "0.1.0",
   "description": "Read-only registry inspector for the DeepSeek Harness Web Client.",
-  "private": true,
   "license": "MIT",
   "repository": {
     "type": "git",

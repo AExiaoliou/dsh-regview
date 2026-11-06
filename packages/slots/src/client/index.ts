@@ -1,5 +1,5 @@
 /**
- * Browser half of `@dsh-regview/slots`: contribute the live Slot / Factory
+ * Browser half of `@aexiaoliou/dsh-regview-slots`: contribute the live Slot / Factory
  * composition tree to the registry inspector.
  *
  * The host half in `src/index.ts` only lets the Loader mount the package row;

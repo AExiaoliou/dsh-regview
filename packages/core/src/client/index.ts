@@ -1,5 +1,5 @@
 /**
- * Public browser entry of `@dsh-regview/core`.
+ * Public browser entry of `@aexiaoliou/dsh-regview-core`.
  *
  * Feature packages import the contract types type-only and receive the runtime
  * service through `ctx.regview`; this entry exports no implementation values.

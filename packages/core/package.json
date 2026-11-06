@@ -1,5 +1,5 @@
 {
-  "name": "@dsh-regview/core",
+  "name": "@aexiaoliou/dsh-regview-core",
   "version": "0.1.0",
   "description": "Read-only registry inspector for the DeepSeek Harness Web Client: resource protocols, tab types, document previews, and Slots.",
   "license": "MIT",

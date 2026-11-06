@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
-import type { RegViewSource } from '@dsh-regview/core/client'
+import type { RegViewSource } from '@aexiaoliou/dsh-regview-core/client'
 import { apply, inject } from '../src/client/index.ts'
 import { en, zh, type RegViewKey } from '../src/client/locales.ts'
 import {

@@ -1,5 +1,5 @@
 /**
- * Browser half of `@dsh-regview/document-previews`: contribute the live
+ * Browser half of `@aexiaoliou/dsh-regview-document-previews`: contribute the live
  * document-preview implementation registry to the registry inspector.
  *
  * The host half in `src/index.ts` only lets the Loader mount the package row;

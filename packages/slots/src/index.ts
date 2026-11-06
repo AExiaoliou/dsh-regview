@@ -1,12 +1,12 @@
 /**
- * Host half of `@dsh-regview/slots`.
+ * Host half of `@aexiaoliou/dsh-regview-slots`.
  *
  * The registry source is a browser feature; this half only lets the Loader
  * mount the package row. It registers nothing and holds no state.
  */
 
 /** Stable Cordis plugin name. */
-export const name = '@dsh-regview/slots'
+export const name = '@aexiaoliou/dsh-regview-slots'
 
 /** Host-side no-op; the browser half owns the source registration. */
 export function apply(): void {}

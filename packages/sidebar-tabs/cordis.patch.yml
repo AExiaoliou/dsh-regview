@@ -1,4 +1,4 @@
-# @dsh-regview/sidebar-tabs: inserts this source plugin's Loader row.
+# @aexiaoliou/dsh-regview-sidebar-tabs: inserts this source plugin's Loader row.
 - insert:
     - id: regview-sidebar-tabs
-      name: '@dsh-regview/sidebar-tabs'
+      name: '@aexiaoliou/dsh-regview-sidebar-tabs'

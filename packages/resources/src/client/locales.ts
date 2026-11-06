@@ -35,7 +35,7 @@ export const en = {
 
 declare module '@deepseek-ai/dsh-client-ui-slots' {
   interface LocaleNamespaceMap {
-    /** Resource-protocol category copy owned by `@dsh-regview/resources`. */
+    /** Resource-protocol category copy owned by `@aexiaoliou/dsh-regview-resources`. */
     'regview.resources': RegViewKey
   }
 }

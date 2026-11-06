@@ -1,4 +1,4 @@
 # The dsh-regview base plugin: the browser service and the global panel.
 - insert:
     - id: regview-core
-      name: '@dsh-regview/core'
+      name: '@aexiaoliou/dsh-regview-core'

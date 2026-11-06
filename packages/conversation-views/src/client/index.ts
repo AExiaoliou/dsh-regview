@@ -1,5 +1,5 @@
 /**
- * Browser half of `@dsh-regview/conversation-views`: contribute the live
+ * Browser half of `@aexiaoliou/dsh-regview-conversation-views`: contribute the live
  * `conversation.view` slot entries to the registry inspector.
  *
  * The host half in `src/index.ts` only lets the Loader mount the package row;

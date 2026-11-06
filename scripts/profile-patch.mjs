@@ -26,7 +26,7 @@ export function packageRows(root) {
     const manifest = JSON.parse(readFileSync(join(dir, 'package.json'), 'utf8'))
     rows.push({
       dir,
-      id: manifest.name.replace('@dsh-regview/', 'regview-'),
+      id: manifest.name.replace('@aexiaoliou/dsh-regview-', 'regview-'),
       name: manifest.name,
       entry: join(dir, 'lib/index.js'),
       built: existsSync(join(dir, 'lib/index.js')) && existsSync(join(dir, 'lib/client.js')),

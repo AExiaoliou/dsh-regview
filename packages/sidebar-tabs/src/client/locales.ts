@@ -43,7 +43,7 @@ export const en = {
 
 declare module '@deepseek-ai/dsh-client-ui-slots' {
   interface LocaleNamespaceMap {
-    /** Right-Sidebar tab-type category copy owned by `@dsh-regview/sidebar-tabs`. */
+    /** Right-Sidebar tab-type category copy owned by `@aexiaoliou/dsh-regview-sidebar-tabs`. */
     'regview.sidebarTabs': RegViewKey
   }
 }

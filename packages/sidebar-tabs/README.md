@@ -1,5 +1,5 @@
-# @dsh-regview/sidebar-tabs
+# @aexiaoliou/dsh-regview-sidebar-tabs
 
 Registry-inspector data source. Registry-inspector source for right-Sidebar tab types.
 
-Install it beside `@dsh-regview/core`; the inspector's category appears while this plugin is active.
+Install it beside `@aexiaoliou/dsh-regview-core`; the inspector's category appears while this plugin is active.

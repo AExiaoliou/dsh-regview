@@ -1,4 +1,4 @@
-# @dsh-regview/document-previews: inserts this source plugin's Loader row.
+# @aexiaoliou/dsh-regview-document-previews: inserts this source plugin's Loader row.
 - insert:
     - id: regview-document-previews
-      name: '@dsh-regview/document-previews'
+      name: '@aexiaoliou/dsh-regview-document-previews'

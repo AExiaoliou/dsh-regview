@@ -68,7 +68,7 @@ importers:
       '@deepseek-ai/dsh-client-ui-slots':
         specifier: 0.2.1-rc.2
         version: 0.2.1-rc.2(@deepseek-ai/cordis@4.0.5)
-      '@dsh-regview/core':
+      '@aexiaoliou/dsh-regview-core':
         specifier: workspace:*
         version: link:../core
 
@@ -125,7 +125,7 @@ importers:
       '@deepseek-ai/dsh-client-ui-slots':
         specifier: 0.2.1-rc.2
         version: 0.2.1-rc.2(@deepseek-ai/cordis@4.0.5)
-      '@dsh-regview/core':
+      '@aexiaoliou/dsh-regview-core':
         specifier: workspace:*
         version: link:../core
 
@@ -143,7 +143,7 @@ importers:
       '@deepseek-ai/dsh-client-ui-slots':
         specifier: 0.2.1-rc.2
         version: 0.2.1-rc.2(@deepseek-ai/cordis@4.0.5)
-      '@dsh-regview/core':
+      '@aexiaoliou/dsh-regview-core':
         specifier: workspace:*
         version: link:../core
 
@@ -161,7 +161,7 @@ importers:
       '@deepseek-ai/dsh-client-ui-slots':
         specifier: 0.2.1-rc.2
         version: 0.2.1-rc.2(@deepseek-ai/cordis@4.0.5)
-      '@dsh-regview/core':
+      '@aexiaoliou/dsh-regview-core':
         specifier: workspace:*
         version: link:../core
 
@@ -179,7 +179,7 @@ importers:
       '@deepseek-ai/dsh-client-ui-slots':
         specifier: 0.2.1-rc.2
         version: 0.2.1-rc.2(@deepseek-ai/cordis@4.0.5)
-      '@dsh-regview/core':
+      '@aexiaoliou/dsh-regview-core':
         specifier: workspace:*
         version: link:../core
 

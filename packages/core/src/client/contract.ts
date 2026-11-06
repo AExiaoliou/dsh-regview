@@ -126,7 +126,7 @@ export interface RegViewInjected {
 
 declare module '@deepseek-ai/cordis' {
   interface Context {
-    /** Registry-inspector category registry provided by `@dsh-regview/core`. */
+    /** Registry-inspector category registry provided by `@aexiaoliou/dsh-regview-core`. */
     regview: RegViewService
   }
 }

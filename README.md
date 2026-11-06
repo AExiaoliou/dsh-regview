@@ -22,18 +22,18 @@ DeepSeek Harness Web Client 的**只读注册表查看器**。它在左侧栏增
 ```text
 dsh-regview/
 ├── packages/
-│   ├── core/                  # @dsh-regview/core
+│   ├── core/                  # @aexiaoliou/dsh-regview-core
 │   │   └── 提供 ctx.regview 服务、全局面板、表格/树 UI、搜索/刷新/locale
-│   ├── resources/             # @dsh-regview/resources
-│   ├── sidebar-tabs/          # @dsh-regview/sidebar-tabs
-│   ├── conversation-views/    # @dsh-regview/conversation-views
-│   ├── document-previews/     # @dsh-regview/document-previews
-│   └── slots/                 # @dsh-regview/slots
+│   ├── resources/             # @aexiaoliou/dsh-regview-resources
+│   ├── sidebar-tabs/          # @aexiaoliou/dsh-regview-sidebar-tabs
+│   ├── conversation-views/    # @aexiaoliou/dsh-regview-conversation-views
+│   ├── document-previews/     # @aexiaoliou/dsh-regview-document-previews
+│   └── slots/                 # @aexiaoliou/dsh-regview-slots
 ├── scripts/                   # 构建校验、profile 安装、Chrome 冒烟
 └── cordis.patch.yml           # 开发 overlay（相对路径）
 ```
 
-`@dsh-regview/core` 是基座插件：它提供浏览器侧 `ctx.regview` 服务，声明 5 个分类的公共 UI，并注册 `sidebar.panellist` 图标与 `main` 面板。5 个 feature 包各自通过 `ctx.regview.register(source)` 注册一个数据源；只安装其中一部分时，面板只显示已安装的分类。
+`@aexiaoliou/dsh-regview-core` 是基座插件：它提供浏览器侧 `ctx.regview` 服务，声明 5 个分类的公共 UI，并注册 `sidebar.panellist` 图标与 `main` 面板。5 个 feature 包各自通过 `ctx.regview.register(source)` 注册一个数据源；只安装其中一部分时，面板只显示已安装的分类。
 
 每个包同时是独立的 DSH bundle（`dsh.bundle.patch`）和 client plugin（`dsh.client`），可以单独安装。
 
@@ -62,7 +62,7 @@ pnpm verify
 浏览器产物是 Web Client 模块表要求的 lazy-CJS 形式：
 
 ```js
-window.__ModuleLoader__.load({ id: '@dsh-regview/core', factory: (require) => { ... } })
+window.__ModuleLoader__.load({ id: '@aexiaoliou/dsh-regview-core', factory: (require) => { ... } })
 ```
 
 `pnpm verify` 会检查每个包的 wrapper id、`lib/index.js`、声明文件、`exports["./client"]`，并确认浏览器 bundle 只 require 平台模块。
@@ -162,7 +162,7 @@ pnpm smoke -- --url http://127.0.0.1:3080
 
 ## 发布 npm 包
 
-仓库包含 6 个可发布的 `@dsh-regview/*` 包，根目录只作为 pnpm workspace 容器。发布工作流位于 `.github/workflows/publish.yml`：
+仓库包含 6 个可发布的 `@aexiaoliou/dsh-regview-*` 包，根目录只作为 pnpm workspace 容器。发布工作流位于 `.github/workflows/publish.yml`：
 
 1. 在 npm 创建一个 Automation Access Token，并在 GitHub 仓库的 Settings → Secrets and variables → Actions 中添加 `NPM_TOKEN`。
 2. 建议先在 Actions → Publish packages 中手动运行，保持 `dry_run=true`，确认每个 tarball 的内容。
@@ -181,9 +181,9 @@ node scripts/uninstall-live.mjs --profile web
 
 ```sh
 cd /home/aexiaoliou/workspace/deepseek-harness
-pnpm dsh plugin --profile web remove @dsh-regview/core @dsh-regview/resources \
-  @dsh-regview/sidebar-tabs @dsh-regview/conversation-views \
-  @dsh-regview/document-previews @dsh-regview/slots
+pnpm dsh plugin --profile web remove @aexiaoliou/dsh-regview-core @aexiaoliou/dsh-regview-resources \
+  @aexiaoliou/dsh-regview-sidebar-tabs @aexiaoliou/dsh-regview-conversation-views \
+  @aexiaoliou/dsh-regview-document-previews @aexiaoliou/dsh-regview-slots
 ```
 
 ## 设计要点

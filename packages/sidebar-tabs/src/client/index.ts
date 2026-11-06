@@ -1,5 +1,5 @@
 /**
- * Browser half of `@dsh-regview/sidebar-tabs`: contribute the live
+ * Browser half of `@aexiaoliou/dsh-regview-sidebar-tabs`: contribute the live
  * right-Sidebar tab-type registry to the registry inspector.
  *
  * The host half in `src/index.ts` only lets the Loader mount the package row;

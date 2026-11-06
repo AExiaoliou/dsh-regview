@@ -12,7 +12,7 @@
 import type { RegViewKey } from './locales.ts'
 
 /*
- * Structural copy of the inspector contract owned by `@dsh-regview/core`.
+ * Structural copy of the inspector contract owned by `@aexiaoliou/dsh-regview-core`.
  *
  * The feature packages must not import that package's source types: their build
  * emits declarations with `rootDir: src`, and the monorepo tsconfig path mapping

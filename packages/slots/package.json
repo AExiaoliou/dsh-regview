@@ -1,5 +1,5 @@
 {
-  "name": "@dsh-regview/slots",
+  "name": "@aexiaoliou/dsh-regview-slots",
   "version": "0.1.0",
   "description": "Registry-inspector source for the live Web Client Slot and Factory tree.",
   "license": "MIT",
@@ -42,19 +42,19 @@
       "inject": [
         "@deepseek-ai/dsh-client-locale",
         "@deepseek-ai/dsh-client-ui-renderer",
-        "@dsh-regview/core"
+        "@aexiaoliou/dsh-regview-core"
       ]
     }
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "^4.0.5",
-    "@dsh-regview/core": "0.1.0"
+    "@aexiaoliou/dsh-regview-core": "0.1.0"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "^4.0.5",
     "@deepseek-ai/dsh-client-locale": "0.2.1-rc.2",
     "@deepseek-ai/dsh-client-ui-slots": "0.2.1-rc.2",
-    "@dsh-regview/core": "workspace:*",
+    "@aexiaoliou/dsh-regview-core": "workspace:*",
     "@deepseek-ai/dsh-client-ui-renderer": "0.2.1-rc.2"
   }
 }

@@ -1,4 +1,4 @@
-# @dsh-regview/slots: inserts this source plugin's Loader row.
+# @aexiaoliou/dsh-regview-slots: inserts this source plugin's Loader row.
 - insert:
     - id: regview-slots
-      name: '@dsh-regview/slots'
+      name: '@aexiaoliou/dsh-regview-slots'

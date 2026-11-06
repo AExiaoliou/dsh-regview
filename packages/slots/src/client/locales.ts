@@ -39,7 +39,7 @@ export const en = {
 
 declare module '@deepseek-ai/dsh-client-ui-slots' {
   interface LocaleNamespaceMap {
-    /** Composition-tree copy owned by `@dsh-regview/slots`. */
+    /** Composition-tree copy owned by `@aexiaoliou/dsh-regview-slots`. */
     'regview.slots': RegViewKey
   }
 }

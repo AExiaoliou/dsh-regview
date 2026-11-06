@@ -18,9 +18,9 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "paths": {
-      "@dsh-regview/core/client": ["./packages/core/src/client/index.ts"],
-      "@dsh-regview/core": ["./packages/core/src/index.ts"],
-      "@dsh-regview/*": ["./packages/*/src/index.ts"]
+      "@aexiaoliou/dsh-regview-core/client": ["./packages/core/src/client/index.ts"],
+      "@aexiaoliou/dsh-regview-core": ["./packages/core/src/index.ts"],
+      "@aexiaoliou/dsh-regview-*": ["./packages/*/src/index.ts"]
     }
   }
 }

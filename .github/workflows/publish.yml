@@ -18,7 +18,6 @@ permissions:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    environment: npm
     env:
       DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || false }}
     steps:
@@ -34,11 +33,11 @@ jobs:
           node-version: 22
           registry-url: https://registry.npmjs.org
           cache: pnpm
+      - name: Install current npm for trusted publishing
+        run: npm install --global npm@^11.15.0
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Check and build
         run: pnpm check
-      - name: Publish packages
+      - name: Publish packages with npm Trusted Publishing
         run: node scripts/publish-packages.mjs
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

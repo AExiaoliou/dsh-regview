@@ -164,12 +164,13 @@ pnpm smoke -- --url http://127.0.0.1:3080
 
 仓库包含 6 个可发布的 `@aexiaoliou/dsh-regview-*` 包，根目录只作为 pnpm workspace 容器。发布工作流位于 `.github/workflows/publish.yml`：
 
-1. 在 npm 创建一个 Automation Access Token，并在 GitHub 仓库的 Settings → Secrets and variables → Actions 中添加 `NPM_TOKEN`。
-2. 建议先在 Actions → Publish packages 中手动运行，保持 `dry_run=true`，确认每个 tarball 的内容。
-3. 准备发布时创建并发布一个 GitHub Release；`release.published` 事件会自动运行正式发布。
-4. 所有包的版本写在各自的 `packages/*/package.json`。发布新版本前请统一修改版本号并提交；同一个版本已经存在于 npm 的包会被自动跳过。
+1. 在 npm 的每个包设置中添加 Trusted Publisher，Provider 选择 **GitHub Actions**，Repository 填 `AExiaoliou/dsh-regview`，Workflow filename 填 `.github/workflows/publish.yml`，不要填写 Environment。
+2. 6 个包都要分别配置一次 Trusted Publisher；npm 目前按包保存信任关系。
+3. 建议先在 Actions → Publish packages 中手动运行，保持 `dry_run=true`，确认每个 tarball 的内容。
+4. 准备发布时创建并发布一个 GitHub Release；`release.published` 事件会自动运行正式发布。
+5. 所有包的版本写在各自的 `packages/*/package.json`。发布新版本前请统一修改版本号并提交；同一个版本已经存在于 npm 的包会被自动跳过。
 
-工作流会先运行 `pnpm check`，再按包检查 npm 上是否已有对应版本，并以 `--access public --provenance` 发布。首次配置完成后，GitHub Actions 需要使用 `NPM_TOKEN` 才能向 npm 认证。
+工作流会先安装 npm 11.15+，再运行 `pnpm check`，按包检查 npm 上是否已有对应版本，并以 `--access public --provenance` 发布。它使用 GitHub OIDC Trusted Publishing，不需要保存 `NPM_TOKEN`，也不需要勾选绕过 2FA 的 token 选项。
 
 ## 回滚
 

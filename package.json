@@ -1,0 +1,49 @@
+{
+  "name": "dsh-regview-monorepo",
+  "version": "0.1.0",
+  "description": "Read-only registry inspector for the DeepSeek Harness Web Client.",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AExiaoliou/dsh-regview.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AExiaoliou/dsh-regview/issues"
+  },
+  "homepage": "https://github.com/AExiaoliou/dsh-regview#readme",
+  "type": "module",
+  "packageManager": "pnpm@11.28.5",
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "scripts": {
+    "clean": "node scripts/clean.mjs",
+    "build": "pnpm -r --sequential run build",
+    "typecheck": "pnpm -r --sequential run typecheck",
+    "test": "vitest run",
+    "verify": "node scripts/verify-build.mjs",
+    "check": "pnpm typecheck && pnpm test && pnpm build && pnpm verify",
+    "install-live": "node scripts/install-live.mjs",
+    "uninstall-live": "node scripts/uninstall-live.mjs",
+    "smoke": "node scripts/ui-smoke.mjs",
+    "print-patch": "node scripts/print-profile-patch.mjs"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/react": "^16.3.3",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^22.20.1",
+    "@types/react": "~18.3.1",
+    "@types/react-dom": "~18.3.0",
+    "js-yaml": "^4.1.0",
+    "jsdom": "29.1.1",
+    "immer": "^10.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tsdown": "^0.22.2",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.11",
+    "zustand": "~4.5.7"
+  }
+}

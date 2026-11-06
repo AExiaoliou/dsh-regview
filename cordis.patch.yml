@@ -1,0 +1,18 @@
+# Development overlay: load every built package from this checkout by relative
+# path. Start a source launch with:
+#
+#   cd /home/aexiaoliou/workspace/deepseek-harness
+#   pnpm dsh web --patch /home/aexiaoliou/workspace/dsh-regview/cordis.patch.yml --port 3081 --no-open
+- insert:
+    - id: regview-core
+      name: './packages/core/lib/index.js'
+    - id: regview-resources
+      name: './packages/resources/lib/index.js'
+    - id: regview-sidebar-tabs
+      name: './packages/sidebar-tabs/lib/index.js'
+    - id: regview-conversation-views
+      name: './packages/conversation-views/lib/index.js'
+    - id: regview-document-previews
+      name: './packages/document-previews/lib/index.js'
+    - id: regview-slots
+      name: './packages/slots/lib/index.js'

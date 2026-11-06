@@ -1,0 +1,4 @@
+# @dsh-regview/conversation-views: inserts this source plugin's Loader row.
+- insert:
+    - id: regview-conversation-views
+      name: '@dsh-regview/conversation-views'

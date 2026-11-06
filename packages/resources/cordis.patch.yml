@@ -1,0 +1,4 @@
+# @dsh-regview/resources: inserts this source plugin's Loader row.
+- insert:
+    - id: regview-resources
+      name: '@dsh-regview/resources'

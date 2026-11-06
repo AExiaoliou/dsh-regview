@@ -1,0 +1,8 @@
+node_modules/
+lib/
+artifacts/
+*.tsbuildinfo
+.DS_Store
+packages/*/src/**/*.js
+packages/*/src/**/*.js.map
+packages/*/src/**/*.d.ts

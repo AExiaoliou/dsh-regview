@@ -160,6 +160,17 @@ pnpm smoke -- --url http://127.0.0.1:3080
 
 `pnpm smoke` 使用本机 `google-chrome --headless=new`、CDP 和 Node 内置 `WebSocket`：等待侧栏入口、点击、断言 5 个分类 tab，并输出 `artifacts/regview-panel.png`。
 
+## 发布 npm 包
+
+仓库包含 6 个可发布的 `@dsh-regview/*` 包，根目录只作为 pnpm workspace 容器。发布工作流位于 `.github/workflows/publish.yml`：
+
+1. 在 npm 创建一个 Automation Access Token，并在 GitHub 仓库的 Settings → Secrets and variables → Actions 中添加 `NPM_TOKEN`。
+2. 建议先在 Actions → Publish packages 中手动运行，保持 `dry_run=true`，确认每个 tarball 的内容。
+3. 准备发布时创建并发布一个 GitHub Release；`release.published` 事件会自动运行正式发布。
+4. 所有包的版本写在各自的 `packages/*/package.json`。发布新版本前请统一修改版本号并提交；同一个版本已经存在于 npm 的包会被自动跳过。
+
+工作流会先运行 `pnpm check`，再按包检查 npm 上是否已有对应版本，并以 `--access public --provenance` 发布。首次配置完成后，GitHub Actions 需要使用 `NPM_TOKEN` 才能向 npm 认证。
+
 ## 回滚
 
 ```sh
